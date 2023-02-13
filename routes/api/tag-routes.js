@@ -4,7 +4,7 @@
 // Hint: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out what req.body will be for POST and PUT routes!
 
 const router = require('express').Router();
-const { Tag, Product, ProductTag } = require('../../old ecommerce/models');
+const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
 

@@ -29,6 +29,3 @@ Category.init(
 
 module.exports = Category;
 
-//  type: DataTypes.BOOLEAN
-//  type: DataTypes.STRING
-//  type: DataTypes.STRING
