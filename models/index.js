@@ -21,7 +21,7 @@ Category.hasMany(Product, {
 
 Product.belongsToMany(Tag, { through: 'ProductTag' });
 
-// ** TODO ** 
+// ** TODO **
 // Tags belongToMany Products (through ProductTag) ~~ COMPLETED
 Tag.belongsToMany(Product, { through: 'ProductTag' });
 

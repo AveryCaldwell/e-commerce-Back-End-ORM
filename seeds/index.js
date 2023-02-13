@@ -6,25 +6,24 @@ const seedProductTags = require('./product-tag-seeds');
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
-  await sequelize.sync({ force: true });
-  console.log('\n----- DATABASE SYNCED -----\n');
-  await seedCategories();
-  console.log('\n----- CATEGORIES SEEDED -----\n');
+    await sequelize.sync({ force: true });
+    console.log('\n----- DATABASE SYNCED -----\n');
+    await seedCategories();
+    console.log('\n----- CATEGORIES SEEDED -----\n');
 
-  await seedProducts();
-  console.log('\n----- PRODUCTS SEEDED -----\n');
+    await seedProducts();
+    console.log('\n----- PRODUCTS SEEDED -----\n');
 
-  await seedTags();
-  console.log('\n----- TAGS SEEDED -----\n');
+    await seedTags();
+    console.log('\n----- TAGS SEEDED -----\n');
 
-  await seedProductTags();
-  console.log('\n----- PRODUCT TAGS SEEDED -----\n');
+    await seedProductTags();
+    console.log('\n----- PRODUCT TAGS SEEDED -----\n');
 
-  process.exit(0);
+    process.exit(0);
 };
 
 seedAll();
-
 
 // todo: ~~~~
 //After creating the models and routes, run npm run seed to seed data to your database so that you can test your routes.
