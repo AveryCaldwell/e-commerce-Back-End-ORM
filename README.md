@@ -87,7 +87,7 @@ source db/schema.sql
 ```
 7. Start the application:
 ```terminal
-node server.js
+npm start
 ```
 8. Open Insomnia to GET, POST, PUT, and DELETE the routes for categories, products, or tags.
 

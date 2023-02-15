@@ -1,11 +1,10 @@
-// ~~~ WORKING ~~~
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
-// GET all categories ~~~WORKS
-// be sure to include its associated Products
+// GET all categories 
+// include its associated Products
 // localhost:3001/api/categories
 router.get('/', async (req, res) => {
     try {
@@ -17,9 +16,9 @@ router.get('/', async (req, res) => {
 });
 
 // GET one category by its `id` value
-// include its associated Products
 // INSOMNIA: localhost:3001/api/categories/4
 router.get('/:id', async (req, res) => {
+    // include its associated Products
     try {
         const categoryData = await Category.findByPk(req.params.id, {
             include: Product,

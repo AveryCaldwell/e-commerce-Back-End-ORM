@@ -1,4 +1,3 @@
-//TODO: working...kinda
 const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
@@ -7,8 +6,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // GET ALL products
 // localhost:3001/api/products
 router.get('/', async (req, res) => {
-    // find all products
-    // be sure to include its associated Category and Tag data
+    // include its associated Category and Tag data
     try {
         const productData = await Product.findAll({
             include: ({ model: Category }, { model: Tag }),
@@ -70,10 +68,9 @@ router.post('/', (req, res) => {
         });
 });
 
-// UPDATE product
+// UPDATE product data
 // INSOMNIA: localhost:3001/api/products/1 ==> type into json: {{"product_name": "Plaid Shorts"}}
 router.put('/:id', (req, res) => {
-    // update product data
     Product.update(req.body, {
         where: {
             id: req.params.id,
