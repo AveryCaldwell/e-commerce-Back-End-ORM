@@ -65,7 +65,10 @@ THEN I am able to successfully create, update, and delete data in my database
 ```terminal
 git clone https://github.com/AveryCaldwell/e-commerce-Back-End-ORM.git
 ```
-2.  Navigate to the folder using the terminal
+2.  Navigate to the folder using the terminal.
+
+3. Use the [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize) packages to connect your Express.js API to a MySQL database and the [dotenv](https://www.npmjs.com/package/dotenv) package to use environment variables to store sensitive data.
+
 3. Install dependencies using:
 ```terminal
 npm install
