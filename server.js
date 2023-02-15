@@ -13,18 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
-// turn on connection to db and server
+// Turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
 });
-
-// TO DO:
-// WHEN I open API GET routes in Insomnia for categories, products, or tags
-// THEN the data for each of these routes is displayed in a formatted JSON
-
-// TO DO:
-// WHEN I test API POST, PUT, and DELETE routes in Insomnia
-// THEN I am able to successfully create, update, and delete data in my database
-
-// TODO: Sync Sequelize to the Database on Server Start
-// Create the code needed in server.js to sync the Sequelize models to the MySQL database on server start.
