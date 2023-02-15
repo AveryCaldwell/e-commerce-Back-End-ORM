@@ -52,22 +52,58 @@ WHEN I test API POST, PUT, and DELETE routes in Insomnia
 THEN I am able to successfully create, update, and delete data in my database
 ```
 
-### User Experience 👤 
-1.  
-2.  
-3.  
-4.  
+## User Experience 👤 
+
+<br> 
+
+> <em> Please Note: Node.js, Insomnia & MySQL need to be installed on your computer for this application.</em>
+
+<br> 
+
+1.  Clone the repository using:
+
+```terminal
+git clone https://github.com/AveryCaldwell/e-commerce-Back-End-ORM.git
+```
+2.  Navigate to the folder using the terminal
+3. Install dependencies using:
+```terminal
+npm install
+```
+4. Log in to your MySQL using:
+```terminal
+mysql -u root -p
+```
+5. Create the database:
+ ```terminal
+source db/schema.sql
+```
+6. After creating the models and routes, run the following command to seed data to your database:
+ ```terminal
+ npm run seed
+```
+7. Start the application:
+```terminal
+node server.js
+```
+8. Open Insomnia to GET, POST, PUT, and DELETE the routes for categories, products, or tags.
 
 <br>
 
-### Screenshot 📸
-​
-![](./)
+___
+
+<br>
+
+## Screenshot 📸
+​<br>
+
+![](./assets/Screenshot.png)
 ​
 ​<br>
 
 ###  Links 🔗
 - Live URL: [ ]( )
+- Github Repository: [https://github.com/AveryCaldwell/e-commerce-Back-End-ORM](https://github.com/AveryCaldwell/e-commerce-Back-End-ORM)
 
 
 <br>
@@ -84,7 +120,8 @@ THEN I am able to successfully create, update, and delete data in my database
 - Express
 - Insomnia
 - GitHub
-- API
+- ORM
+- MySQL Workbench
 
 <br>
 
