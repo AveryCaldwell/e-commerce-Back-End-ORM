@@ -48,6 +48,7 @@ router.post('/', (req, res) => {
 });
 
 // UPDATE a tag's name by its `id` value
+// INSOMNIA: localhost:3001/api/tags/11 ; { "tag_name": "pink" }
 router.put('/:id', (req, res) => {
     Tag.update(
         {
@@ -72,6 +73,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE on tag by its `id` value
+// INSOMNIA: localhost:3001/api/tags/11
 router.delete('/:id', (req, res) => {
     Tag.destroy({
         where: {

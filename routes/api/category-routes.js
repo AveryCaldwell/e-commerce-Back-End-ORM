@@ -16,9 +16,9 @@ router.get('/', async (req, res) => {
     }
 });
 
-// GET one category by its `id` value ~~~WORKS
-// be sure to include its associated Products
-// localhost:3001/api/categories/4
+// GET one category by its `id` value
+// include its associated Products
+// INSOMNIA: localhost:3001/api/categories/4
 router.get('/:id', async (req, res) => {
     try {
         const categoryData = await Category.findByPk(req.params.id, {
@@ -35,7 +35,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// CREATE a new category ~~~WORKS
+// CREATE a new category
 // INSOMNIA: localhost:3001/api/categories/ ==> type into json: {"category_name": "Black Shorts"}
 router.post('/', async (req, res) => {
     try {
@@ -46,7 +46,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// UPDATE a category by its `id` value ~~~WORKS
+// UPDATE a category by its `id` value
 // INSOMNIA: localhost:3001/api/categories/9 ==> type into json: {{"category_name": "Flamingo Shorts"}}
 router.put('/:id', async (req, res) => {
     // All the fields you can update and the data attached to the request body.
@@ -63,7 +63,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// DELETE a category by its `id` value  ~~~WORKS
+// DELETE a category by its `id` value
 // // INSOMNIA: localhost:3001/api/categories/9 ==> type into json: {{"id": 9 }}
 router.delete('/:id', async (req, res) => {
     const categoryData = await Category.destroy({

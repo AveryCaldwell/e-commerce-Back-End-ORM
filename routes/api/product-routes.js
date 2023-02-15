@@ -4,7 +4,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
-// GET ALL products =================COMPLETE=================
+// GET ALL products
 // localhost:3001/api/products
 router.get('/', async (req, res) => {
     // find all products
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// GET ONE product by its `id` ===============COMPLETE=================
+// GET ONE product by its `id`
 // localhost:3001/api/products/3
 router.get('/:id', async (req, res) => {
     try {
@@ -70,7 +70,7 @@ router.post('/', (req, res) => {
         });
 });
 
-// UPDATE product +++++WORKS?+++++
+// UPDATE product
 // INSOMNIA: localhost:3001/api/products/1 ==> type into json: {{"product_name": "Plaid Shorts"}}
 router.put('/:id', (req, res) => {
     // update product data
