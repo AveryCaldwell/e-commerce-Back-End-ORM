@@ -124,7 +124,6 @@ ___
 - Express
 - Insomnia
 - GitHub
-- ORM
 - MySQL Workbench
 
 <br>
