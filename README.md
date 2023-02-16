@@ -81,15 +81,16 @@ mysql -u root -p
  ```terminal
 source db/schema.sql
 ```
-6. After creating the models and routes, run the following command to seed data to your database:
+6. Exit MySql using the command: `quit`.
+7. Run the following command to seed data to your database:
  ```terminal
  npm run seed
 ```
-7. Start the application:
+8. Start the application:
 ```terminal
 npm start
 ```
-8. Open Insomnia to GET, POST, PUT, and DELETE the routes for categories, products, or tags.
+9. Open Insomnia to GET, POST, PUT, and DELETE the routes for categories, products, or tags.
 
 <br>
 
@@ -105,7 +106,7 @@ ___
 ​<br>
 
 ###  Links 🔗
-- Live URL: [https://watch.screencastify.com/v/TdLJXDVYKnwGBGIURgHI](https://watch.screencastify.com/v/TdLJXDVYKnwGBGIURgHI)
+- Live URL: [https://drive.google.com/file/d/1wG8Ycw3L0F77idZ7zadnKQkar9cb87bK/view](https://drive.google.com/file/d/1wG8Ycw3L0F77idZ7zadnKQkar9cb87bK/view)
 - Github Repository: [https://github.com/AveryCaldwell/e-commerce-Back-End-ORM](https://github.com/AveryCaldwell/e-commerce-Back-End-ORM)
 
 
