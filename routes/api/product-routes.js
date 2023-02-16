@@ -4,7 +4,6 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // The `/api/products` endpoint
 
 // GET ALL products
-// localhost:3001/api/products
 router.get('/', async (req, res) => {
     // include its associated Category and Tag data
     try {
@@ -18,7 +17,6 @@ router.get('/', async (req, res) => {
 });
 
 // GET ONE product by its `id`
-// localhost:3001/api/products/3
 router.get('/:id', async (req, res) => {
     try {
         const productData = await Product.findByPk(req.params.id, {
@@ -36,7 +34,6 @@ router.get('/:id', async (req, res) => {
 });
 
 // CREATE new product
-// {"product_name": "Velvet Suit","price": 250.00,"stock": 3,"tagIds": 1}
 router.post('/', (req, res) => {
     /* req.body should look like this...
     {
@@ -69,7 +66,6 @@ router.post('/', (req, res) => {
 });
 
 // UPDATE product data
-// INSOMNIA: localhost:3001/api/products/1 ==> type into json: {{"product_name": "Plaid Shorts"}}
 router.put('/:id', (req, res) => {
     Product.update(req.body, {
         where: {
@@ -110,7 +106,6 @@ router.put('/:id', (req, res) => {
         });
 });
 
-// INSOMNIA: localhost:3001/api/categories/1 =>  {"id": 2}
 // DELETE by id
 router.delete('/:id', async (req, res) => {
     const productData = await Product.destroy({

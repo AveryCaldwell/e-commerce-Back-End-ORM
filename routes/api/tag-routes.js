@@ -18,7 +18,6 @@ router.get('/', async (req, res) => {
 });
 
 // GET a single tag by its `id`
-// localhost:3001/api/tag/4
 router.get('/:id', async (req, res) => {
     try {
         const tagData = await Tag.findOne({
@@ -36,7 +35,6 @@ router.get('/:id', async (req, res) => {
 });
 
 // CREATE a new tag
-// INSOMNIA: { "tag_name": "coral" }
 router.post('/', async (req, res) => {
     try {
         const tagData = await Tag.create(req.body);
@@ -47,7 +45,6 @@ router.post('/', async (req, res) => {
 });
 
 // UPDATE a tag's name by its `id` value
-// INSOMNIA: localhost:3001/api/tags/11 ; { "tag_name": "pink" }
 router.put('/:id', async (req, res) => {
     // All the fields you can update and the data attached to the request body.
     try {
@@ -64,7 +61,6 @@ router.put('/:id', async (req, res) => {
 });
 
 // DELETE on tag by its `id` value
-// INSOMNIA: localhost:3001/api/tags/11
 router.delete('/:id', async (req, res) => {
     const tagData = await Tag.destroy({
         where: {
